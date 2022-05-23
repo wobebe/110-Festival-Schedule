@@ -2,61 +2,61 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;
 
-public class Schedule implements ActionListener{
-    private JPanel panel;
-    private JFrame frame;
+
+public class Schedule 
+    extends JFrame{
+
+
+    //Created instance variables
+    private Container container;
+    private JLabel title;
     private JLabel name;
     private JTextField nameText;
-    private JLabel length;
-    private JTextField lengthHrs;
-    private JTextField lengthMins;
-    private JButton button;
-    
+    private JLabel priority;
+    private JLabel time;
+    private JButton conf;
+
     
     public Schedule(){
-        panel = new JPanel();
-        frame = new JFrame();
-        
 
-        frame.setTitle("Schedule input");
-        frame.setSize(400, 400);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);
-        frame.add(panel);
-        panel.setLayout(null);
-        
-        name = new JLabel("Act Name:");
-        name.setBounds(10, 20, 80, 25);
-        panel.add(name);
-        
+        setTitle("Schedule Form");
+		setBounds(300, 90, 900, 600);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setResizable(false);
+
+		container = getContentPane();
+		container.setLayout(null);
+
+        title = new JLabel("Schedule Form");
+        title.setBounds(200, 30, 300, 30);
+        container.add(title);
+
+        name = new JLabel("Name:");
+        name.setBounds(100, 100, 100, 20);
+        container.add(name);
+
         nameText = new JTextField();
-        nameText.setBounds(120, 20, 165, 25);
-        panel.add(nameText);
-        
-        length = new JLabel("Act Length:");
-        length.setBounds(10, 50, 100, 25);
-        panel.add(length);
+        nameText.setBounds(200, 100, 190, 20);
+        container.add(nameText);
 
-        lengthHrs = new JTextField();
-        lengthHrs.setBounds(120, 50, 40, 25);
-        panel.add(lengthHrs);
-        
-        lengthMins = new JTextField();
-        lengthMins.setBounds(180, 50, 105, 25);
-        panel.add(lengthMins);
-        
-        button = new JButton("Done");
-        button.setBounds(10, 80, 80, 25);
-        panel.add(button);
-        button.addActionListener(this);
-    }
+        priority = new JLabel("Priority:");
+        priority.setBounds(100, 150, 100, 20);
+        container.add(priority);
 
-    public void actionPerformed(ActionEvent e){
+        time = new JLabel("Length:");
+        time.setBounds(100, 200, 100, 20);
+        container.add(time);
+
+        conf = new JButton("Confirm");
+        conf.setBounds(150, 450, 100, 30);
+        container.add(conf);
+
+        setVisible(true);
+
+    }
         
-    }
-    public static void main(String[] args){
-        new Schedule();
-    }
+
 }
+
 
 
