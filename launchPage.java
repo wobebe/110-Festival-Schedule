@@ -126,10 +126,10 @@ public class launchPage
         program.stages  = (Integer)stageNo.getSelectedItem();
         program.gaps  = (Integer)gapNo.getSelectedItem();
         program.day  = (Integer)daysNo.getSelectedItem();
-        System.out.println(program.pc);
-        System.out.println(program.gaps);
-        System.out.println(program.stages);
-        System.out.println(program.day);
+        // System.out.println(program.pc);
+        // System.out.println(program.gaps);
+        // System.out.println(program.stages);
+        // System.out.println(program.day);
         dispose();
         Schedule schedule = new Schedule();
 

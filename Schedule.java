@@ -103,10 +103,23 @@ public class Schedule
     
     public void actionPerformed(ActionEvent e) { 
     //code that reacts to the action... 
+    int x = program.pc;
+    int i= program.i;
     if(e.getSource()==conf){
         
-    }
+        if ( i< x){
+            
+            String string = nameText.getText();
+            program.nameList.add(string);
+            program.priorityList.add((Integer)priorityNo.getSelectedItem());
+            dispose();
+            Schedule y = new Schedule();
+            i = i + 1;
+            System.out.println(x);
+            System.out.println(i);
 
+    }
+    }
     }
         
 
