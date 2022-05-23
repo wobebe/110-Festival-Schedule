@@ -4,4 +4,9 @@ import java.awt.*;
 
 public class Array {
     
+    
+
+    public Array(){
+
+    }
 }
