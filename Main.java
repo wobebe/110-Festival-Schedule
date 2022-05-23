@@ -5,7 +5,8 @@ import java.awt.*;
 
 public class Main{
     public static void main(String[] args){
-        Schedule a = new Schedule();
+        launchPage LaunchPage = new launchPage();
+        //Schedule schedule = new Schedule();
       
         
         
