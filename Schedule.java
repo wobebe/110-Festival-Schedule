@@ -20,6 +20,7 @@ public class Schedule
     private JComboBox mins;
     private JComboBox priorityNo;
 
+    // Integer arrays for the comboBoxes
     private Integer hoursArray[]
         ={0,1, 2, 3, 4, 5,
         6, 7, 8, 9, 10,
@@ -48,17 +49,17 @@ public class Schedule
     
     public Schedule(){
 
-        setTitle("Schedule Form");
-		setBounds(300, 90, 900, 600);
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setTitle("Schedule Form"); //sets title of the frame
+		setBounds(300, 90, 900, 600); //set to x, y, width, height
+		setDefaultCloseOperation(EXIT_ON_CLOSE); // causes exit after a close window event
 		setResizable(false);
 
 		container = getContentPane();
-		container.setLayout(null);
+		container.setLayout(null); //No layout manager
 
         title = new JLabel("Schedule Form");
         title.setBounds(200, 30, 300, 30);
-        container.add(title);
+        container.add(title); // adds object to frame
 
         name = new JLabel("Name:");
         name.setBounds(100, 100, 100, 20);
@@ -92,9 +93,8 @@ public class Schedule
 
         conf = new JButton("Confirm");
         conf.setBounds(150, 450, 100, 30);
-        conf.addActionListener(this);
+        conf.addActionListener(this); //signals if pressed
         container.add(conf);
-
 
 
         setVisible(true);
